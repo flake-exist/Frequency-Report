@@ -5,8 +5,7 @@ object CONSTANTS {
   val necessary_args = Map(
     "path_data_chain" -> "String",
     "path_data_position" -> "String",
-    "output_path" -> "String",
-    "splitter" -> "String")
+    "output_path" -> "String")
 
   case class OptionMap(opt: String, value: String) {
 
@@ -28,6 +27,7 @@ object CONSTANTS {
 
     val (options, _) = args.partition(_.startsWith("-"))
     val interface = collection.mutable.Map[String, List[String]]()
+    println(options)
 
     options.map { elem =>
       val pairUntrust = elem.split("=")
